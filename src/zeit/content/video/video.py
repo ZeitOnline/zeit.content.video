@@ -46,7 +46,7 @@ class Video(zeit.cms.content.metadata.CommonMetadata):
     zeit.cms.content.dav.mapProperties(
         zeit.content.video.interfaces.IVideo,
         zeit.cms.interfaces.DOCUMENT_SCHEMA_NS,
-        ('has_recensions', 'expires', 'video_still', 'flv_url', 'thumbnail'))
+        ('has_recensions', 'expires', 'video_still', 'flv_url', 'thumbnail', 'transcript'))
 
     id_prefix = 'vid'
 
@@ -57,6 +57,10 @@ class Video(zeit.cms.content.metadata.CommonMetadata):
     @property
     def teaserTitle(self):
         return self.title
+
+    transcript = zeit.cms.content.property.ObjectPathProperty(
+        '.transcript',
+        zeit.content.video.interfaces.IVideo['transcript'])
 
     renditions = RenditionsProperty('.head.renditions.rendition')
 

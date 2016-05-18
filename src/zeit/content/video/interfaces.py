@@ -53,6 +53,12 @@ class IVideo(IVideoContent):
         readonly=True,
         default=None)
 
+    transcript = zope.schema.Text(
+        title=_('Transcript of video'),
+        required=False,
+        readonly=False,
+        default=None)
+
     video_still = zope.schema.URI(
         title=_('URI of the still image'),
         required=False,

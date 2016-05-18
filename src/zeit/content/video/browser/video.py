@@ -23,7 +23,7 @@ class Edit(zeit.cms.browser.form.EditForm):
         'product', 'ressort', 'keywords', 'serie',
         'dailyNewsletter', 'banner', 'banner_id',
         'breaking_news', 'has_recensions', 'commentsAllowed',
-        'related', 'channels', 'lead_candidate',
+        'related', 'channels', 'lead_candidate', 'transcript',
         # remaining:
         '__name__',
         'created', 'date_first_released', 'modified', 'expires',
@@ -32,7 +32,7 @@ class Edit(zeit.cms.browser.form.EditForm):
     field_groups = (
         gocept.form.grouped.Fields(
             _("Texts"),
-            ('supertitle', 'title', 'teaserText'),
+            ('supertitle', 'title', 'teaserText', 'transcript'),
             css_class='wide-widgets column-left'),
         gocept.form.grouped.Fields(
             _("Navigation"),
