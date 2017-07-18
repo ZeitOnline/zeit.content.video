@@ -1,7 +1,7 @@
 zeit.content.video changes
 ==========================
 
-2.7.5 (unreleased)
+2.7.5 (2017-07-18)
 ------------------
 
 - BUG-500: Update to new dependency API
